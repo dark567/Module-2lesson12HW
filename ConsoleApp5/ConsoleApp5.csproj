@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\ICarnations.cs" />
     <Compile Include="Interfaces\IRoses.cs" />
     <Compile Include="Interfaces\ITulips.cs" />
+    <Compile Include="Logic\BouquetOfFlowersLogic.cs" />
     <Compile Include="Logic\CarnationsLogic.cs" />
     <Compile Include="Logic\RosesLogic.cs" />
     <Compile Include="Logic\TulipsLogic.cs" />

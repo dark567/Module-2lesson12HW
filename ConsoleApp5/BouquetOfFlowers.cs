@@ -15,6 +15,7 @@ namespace ConsoleApp5
         public double Price { get; set; }
 
         public static List<BouquetOfFlowers> _bouquetOfFlowers;
+
         static BouquetOfFlowers()
         {
             _bouquetOfFlowers = new List<BouquetOfFlowers>();
