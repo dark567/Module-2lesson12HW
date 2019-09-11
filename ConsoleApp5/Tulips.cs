@@ -9,10 +9,10 @@ namespace ConsoleApp5
 {
     public class Tulips : Flowers, ITulips
     {
-        public string type;
-        public double price;
-        public int count;
-        public DateTime dataPost;
+        private string type;
+        private double price;
+        private int count;
+        private DateTime dataPost;
 
         public static List<Tulips> _modelTulips;
 

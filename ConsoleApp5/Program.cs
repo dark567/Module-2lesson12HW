@@ -77,7 +77,6 @@ namespace ConsoleApp5
                 count = ran.Next(1, 21);
                 BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: TulipsLogic.GetTulips[i].Type, count: count, price: TulipsLogic.GetTulips[i].Price * count));
             }
-
         }
     }
 }
