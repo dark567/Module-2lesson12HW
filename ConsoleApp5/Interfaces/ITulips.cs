@@ -8,5 +8,6 @@ namespace ConsoleApp5.Interfaces
 {
     interface ITulips
     {
+        void Poliv();
     }
 }

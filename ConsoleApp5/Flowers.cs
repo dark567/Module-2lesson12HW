@@ -10,6 +10,7 @@ namespace ConsoleApp5
     {
         public abstract string Type { get; set; }
         public abstract double Price { get; set; }
+        public abstract int Count { get; set; }
         public abstract DateTime DataPost { get; set; }
     }
 }

@@ -11,11 +11,12 @@ namespace ConsoleApp5
     {
         public string type;
         public double price;
+        public int count;
         public DateTime dataPost;
 
         public override string Type
         {
-            get { return "Mr/Ms. " + type; }
+            get { return "Tulips: " + type; }
             set { type = value; }
         }
 
@@ -33,6 +34,19 @@ namespace ConsoleApp5
         {
             get { return dataPost; }
             set { dataPost = DateTime.Now; }
+        }
+
+        public override int Count {
+            get {
+                if (count > 0) return count;
+                else throw new Exception("count < 0");
+            }
+            set { count = value; }
+        }
+
+        public void Poliv()
+        {
+            Console.WriteLine("Poliv");
         }
     }
 }
