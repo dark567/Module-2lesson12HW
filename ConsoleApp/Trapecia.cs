@@ -16,7 +16,6 @@ namespace ConsoleApp
     {
         public Point A { get; set; }
         public Point B { get; set; }
-
         public Point C { get; set; }
         public Point D { get; set; }
 
@@ -28,7 +27,7 @@ namespace ConsoleApp
             this.D = D;
         }
 
-        public static List<Trapecia> GetSampleProducts()
+        public static List<Trapecia> SetListTrapecia()
         {
             return new List<Trapecia>
             {

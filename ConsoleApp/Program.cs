@@ -11,7 +11,7 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
-            List<Trapecia> listTrap = Trapecia.GetSampleProducts();
+            List<Trapecia> listTrap = Trapecia.SetListTrapecia();
 
            // listTrap = Trapecia.GetSampleProducts();
 

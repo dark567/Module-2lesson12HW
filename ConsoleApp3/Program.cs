@@ -15,6 +15,33 @@ namespace ConsoleApp3
              */
         static void Main(string[] args)
         {
+            List<Kvadrat> listKvadrat = Kvadrat.SetListKvadrat();
+            List<Circle> listCircle = Circle.SetListCircle();
+            List<Triangle> listTriangle = Triangle.SetListTriangle();
+
+            Console.WriteLine("Kvadrat");
+            for (int i = 0; i < listKvadrat.Count; i++)
+            {
+                Console.WriteLine($"[{i}]:Perimeter{listKvadrat[i].Perimeter():F2}");
+                Console.WriteLine($"[{i}]:Square:{listKvadrat[i].Squire():F2}");
+                Console.WriteLine("--------------------------");
+            }
+            Console.WriteLine("Circle");
+            for (int i = 0; i < listCircle.Count; i++)
+            {
+                Console.WriteLine($"[{i}]:Perimeter{listCircle[i].Perimeter():F2}");
+                Console.WriteLine($"[{i}]:Square:{listCircle[i].Squire():F2}");
+                Console.WriteLine("--------------------------");
+            }
+            Console.WriteLine("Triangle");
+            for (int i = 0; i < listTriangle.Count; i++)
+            {
+                Console.WriteLine($"[{i}]:Perimeter{listTriangle[i].Perimeter():F2}");
+                Console.WriteLine($"[{i}]:Square:{listTriangle[i].Squire():F2}");
+                Console.WriteLine("--------------------------");
+            }
+
+            Console.ReadLine();
         }
     }
 }

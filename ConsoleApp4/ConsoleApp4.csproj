@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Furniture.cs" />
+    <Compile Include="FurnitureLogic.cs" />
+    <Compile Include="IMaterial.cs" />
+    <Compile Include="Manufacturer.cs" />
+    <Compile Include="Material.cs" />
+    <Compile Include="MaterialLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

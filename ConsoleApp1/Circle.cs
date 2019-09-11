@@ -8,8 +8,8 @@ namespace ConsoleApp1
 {
     public struct Point
     {
-        public double X;
-        public double Y;
+        public int X;
+        public int Y;
     }
     public class Circle : ICircle
     {
