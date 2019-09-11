@@ -14,6 +14,21 @@ namespace ConsoleApp5
         public int count;
         public DateTime dataPost;
 
+        public static List<Carnations> _modelCarnations;
+
+        static Carnations()
+        {
+            _modelCarnations = new List<Carnations>();
+
+        }
+        public Carnations(string _type, double _price, int _count, DateTime? _dataPost)
+        {
+            this.type = _type;
+            this.price = _price;
+            this.count = _count;
+            this.dataPost = _dataPost ?? DateTime.Now;
+        }
+
         public override string Type
         {
             get { return "Carnations: " + type; }

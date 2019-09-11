@@ -7,12 +7,29 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    class Roses : Flowers, IRoses
+    public class Roses : Flowers, IRoses
     {
-        public string type;
-        public double price;
-        public int count;
-        public DateTime dataPost;
+        private string type;
+        private double price;
+        private int count;
+        private DateTime dataPost;
+
+        public static List<Roses> _modelRoses;
+
+        static Roses()
+        {
+            _modelRoses = new List<Roses>();
+
+        }
+
+        public Roses(string _type, double _price, int _count, DateTime? _dataPost)
+        {
+            this.type = _type;
+            this.price = _price;
+            this.count = _count;
+            this.dataPost = _dataPost ?? DateTime.Now;
+            //this.dataPost = _dataPost == null ? DateTime.Now: DateTime.Now;
+        }
 
         public override string Type
         {
