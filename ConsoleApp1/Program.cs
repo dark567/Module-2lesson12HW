@@ -18,6 +18,17 @@ namespace ConsoleApp1
              */
         static void Main(string[] args)
         {
+            Circle circle1 = new Circle(_centr: new Point { X = 0, Y = 0 }, _radios: 10);
+            Circle circle2 = new Circle(_centr: new Point { X = 1, Y = 1 }, _radios: 10);
+            Circle circle3 = new Circle(_centr: new Point { X = 0, Y = 0 }, _radios: 10);
+
+            Console.WriteLine(circle1 == circle2);
+
+            Console.WriteLine(circle1.Equals(circle2));
+            
+            Console.WriteLine(circle1.EqualsSquareCircles(circle1, circle2));
+
+            Console.ReadKey();
         }
     }
 }
