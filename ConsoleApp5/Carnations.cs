@@ -16,11 +16,8 @@ namespace ConsoleApp5
 
         public static List<Carnations> _modelCarnations;
 
-        static Carnations()
-        {
-            _modelCarnations = new List<Carnations>();
+        static Carnations() => _modelCarnations = new List<Carnations>();
 
-        }
         public Carnations(string _type, double _price, int _count, DateTime? _dataPost)
         {
             this.type = _type;
@@ -31,34 +28,27 @@ namespace ConsoleApp5
 
         public override string Type
         {
-            get { return "Carnations: " + type; }
-            set { type = value; }
+            get => "Carnations: " + type;
+            set => type = value ?? throw new ArgumentNullException(nameof(value), "type cannot be null");
         }
 
         public override double Price
         {
-            get
-            {
-                if (price > 0) return price;
-                else throw new Exception("price < 0");
-            }
-            set { price = value; }
+            get => price > 0 ? price: throw new Exception("price < 0");
+            set => price = value;
         }
 
         public override DateTime DataPost
         {
-            get { return dataPost; }
-            set { dataPost = DateTime.Now; }
+            get => dataPost;
+            set => dataPost = DateTime.Now;
         }
 
         public override int Count
         {
-            get
-            {
-                if (count > 0) return count;
-                else throw new Exception("count < 0");
-            }
-            set { count = value; }
+
+            get => count > 0 ? count : throw new Exception("count < 0");
+            set => count = value;
         }
 
         public void Propolka()

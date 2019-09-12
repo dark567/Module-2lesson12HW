@@ -1,13 +1,9 @@
 ﻿using ConsoleApp5.Logic;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp5
 {
-    class Program
+    internal class Program
     {
         /*
          Необходимо реализовать иерархию цветов (розы, гвоздики, тюльпаны). Создать несколько объектов-цветов. 
@@ -17,7 +13,7 @@ namespace ConsoleApp5
         Все товары должны наследовать абстрактный класс с базовым набором полей (имя, цена, и т.д.) 
         + кастомный интерфейс (напр. сборка, разборка или что-то в этом духе).
              */
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             AddNEWListForExample();
             Console.WriteLine($"Flower Type\t\t Price\t\tDataPost");
@@ -25,7 +21,7 @@ namespace ConsoleApp5
             {
                 Console.WriteLine($"{RosesLogic.GetRoses[i].Type,5}\t {RosesLogic.GetRoses[i].Price,5}\t{RosesLogic.GetRoses[i].DataPost.ToString("dd-MM-yyyy"),17}");
             }
-            Console.WriteLine(new string('-',50));
+            Console.WriteLine(new string('-', 50));
             for (int i = 0; i < CarnationsLogic.GetCarnations.Length; i++)
             {
                 Console.WriteLine($"{CarnationsLogic.GetCarnations[i].Type,1}\t{CarnationsLogic.GetCarnations[i].Price,5}\t{CarnationsLogic.GetCarnations[i].DataPost.ToString("dd-MM-yyyy"),17}");
@@ -36,19 +32,20 @@ namespace ConsoleApp5
                 Console.WriteLine($"{TulipsLogic.GetTulips[i].Type,5}\t {TulipsLogic.GetTulips[i].Price,5}\t{TulipsLogic.GetTulips[i].DataPost.ToString("dd-MM-yyyy"),17}");
             }
             Console.WriteLine(new string('-', 50));
-            Console.WriteLine($"Bouquet Name\t\t Type\t\t\tPrice\tCount");
+            Console.WriteLine($"Bouquet Name\t\t Type\t\t\t\tPrice\tCount");
             for (int i = 0; i < BouquetOfFlowersLogic.GetBouquetOfFlowers.Length; i++)
             {
-                Console.WriteLine($"{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Name,5}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Type,5}\t {BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Price,5}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Count,5}");
+                Console.WriteLine($"{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Name,5}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Type}\t\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Price}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Count,5}");
             }
+
 
             Console.ReadKey();
 
         }
 
-        static void AddNEWListForExample()
+        private static void AddNEWListForExample()
         {
-            RosesLogic.AddRoses(new Roses(_type: "Red Barhat", _price: 10.99, _count:13, _dataPost: null));
+            RosesLogic.AddRoses(new Roses(_type: "Red Barhat", _price: 10.99, _count: 13, _dataPost: null));
             RosesLogic.AddRoses(new Roses(_type: "Black Barhat", _price: 75, _count: 13, _dataPost: null));
             RosesLogic.AddRoses(new Roses(_type: "White Prince", _price: 16, _count: 13, _dataPost: null));
 
@@ -65,7 +62,7 @@ namespace ConsoleApp5
             for (int i = 0; i < RosesLogic.GetRoses.Length; i++)
             {
                 count = ran.Next(1, 21);
-               BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: RosesLogic.GetRoses[i].Type, count: count, priceOut: RosesLogic.GetRoses[i].Price));
+                BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: RosesLogic.GetRoses[i].Type, count: count, priceOut: RosesLogic.GetRoses[i].Price));
             }
             for (int i = 0; i < CarnationsLogic.GetCarnations.Length; i++)
             {
