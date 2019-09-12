@@ -32,10 +32,10 @@ namespace ConsoleApp5
                 Console.WriteLine($"{TulipsLogic.GetTulips[i].Type,5}\t {TulipsLogic.GetTulips[i].Price,5}\t{TulipsLogic.GetTulips[i].DataPost.ToString("dd-MM-yyyy"),17}");
             }
             Console.WriteLine(new string('-', 50));
-            Console.WriteLine($"Bouquet Name\t\t Type\t\t\t\tPrice\tCount");
+            Console.WriteLine($"Bouquet Name\t\tType\t\t\t\tCount\tPrice");
             for (int i = 0; i < BouquetOfFlowersLogic.GetBouquetOfFlowers.Length; i++)
             {
-                Console.WriteLine($"{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Name,5}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Type}\t\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Price}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Count,5}");
+                Console.WriteLine($"{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Name,10}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Type,-25}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Count,-5}\t{BouquetOfFlowersLogic.GetBouquetOfFlowers[i].Price,-5}");
             }
 
 
