@@ -65,17 +65,17 @@ namespace ConsoleApp5
             for (int i = 0; i < RosesLogic.GetRoses.Length; i++)
             {
                 count = ran.Next(1, 21);
-               BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: RosesLogic.GetRoses[i].Type, count: count, price: RosesLogic.GetRoses[i].Price * count));
+               BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: RosesLogic.GetRoses[i].Type, count: count, priceOut: RosesLogic.GetRoses[i].Price));
             }
             for (int i = 0; i < CarnationsLogic.GetCarnations.Length; i++)
             {
                 count = ran.Next(1, 21);
-                BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: CarnationsLogic.GetCarnations[i].Type, count: count, price: CarnationsLogic.GetCarnations[i].Price * count));
+                BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: CarnationsLogic.GetCarnations[i].Type, count: count, priceOut: CarnationsLogic.GetCarnations[i].Price));
             }
             for (int i = 0; i < TulipsLogic.GetTulips.Length; i++)
             {
                 count = ran.Next(1, 21);
-                BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: TulipsLogic.GetTulips[i].Type, count: count, price: TulipsLogic.GetTulips[i].Price * count));
+                BouquetOfFlowersLogic.AddBouquetOfFlowers(new BouquetOfFlowers(name: $"Perfect Bouquet_{i}", type: TulipsLogic.GetTulips[i].Type, count: count, priceOut: TulipsLogic.GetTulips[i].Price));
             }
         }
     }

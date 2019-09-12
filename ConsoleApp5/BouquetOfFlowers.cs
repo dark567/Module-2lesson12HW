@@ -14,6 +14,19 @@ namespace ConsoleApp5
         public int Count { get; set; }
         public double Price { get; set; }
 
+        //public double Price //todo
+        //{
+        //    get
+        //    {
+        //        int bouquetPrice = 0;
+        //        foreach (var flower in curBouquet)
+        //        {
+        //            bouquetPrice += flower.Key.Price * flower.Value;
+        //        }
+        //        return bouquetPrice;
+        //    }
+        //}
+
         public static List<BouquetOfFlowers> _bouquetOfFlowers;
 
         static BouquetOfFlowers()
@@ -21,12 +34,12 @@ namespace ConsoleApp5
             _bouquetOfFlowers = new List<BouquetOfFlowers>();
         }
 
-        public BouquetOfFlowers(string name, string type, int count, double price)
+        public BouquetOfFlowers(string name, string type, int count, double priceOut)
         {
             this.Name = name;
             this.Type = type;
             this.Count = count;
-            this.Price = price;
+            this.Price = priceOut * count;
         }
     }
 }
